@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="libs/bootstrap-4.1.3-dist/css/bootstrap.min.css">
+    <link data-require="bootstrap@3.3.7" data-semver="3.3.7" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker-standalone.min.css" />
+    <script data-require="jquery@3.1.1" data-semver="3.1.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script data-require="MomentJS@2.10.0" data-semver="2.10.0" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+
+
+    <link rel="stylesheet" href="css/main.min.css">
+
+</head>
+<body>
+
+
+<div class="main">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="main__header header">
+                    <div class="header__title">Labrecque Family Chiropractic, PC
+                        <span class="header__title--bold">Scoliosis Protocol</span>
+                    </div>
+                    <div class="header__form form">
+                        <div class="row">
+                            <div class="col-7 offset-1">
+                                <div class="form-group">
+                                    <label for="form-control1" class="form-name">PATIENT NAME:</label>
+                                    <input type="text" class="form-control" id="form-control1">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <label for="form-control2" class="form-name">DOB: </label>
+                                    <input type="number" class="form-control form-control--min" id="form-control2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table">
+            <div class="table__head">
+                <div class="row">
+                    <div class="col-2 offset-1">
+                        <div class="table__cell table__cell--capt">Date  </div>
+                    </div>
+                    <div class="col-1"><div class="table__cell table__cell--capt">Initials</div></div>
+                    <div class="col-1"><div class="table__cell table__cell--capt">Table Total Min</div></div>
+                    <div class="col-1"><div class="table__cell table__cell--capt">Chair Total Min</div></div>
+                    <div class="col-6"><div class="table__cell table__cell--capt table__cell--last">Notes (Indicate how patient tolerated treatment)</div></div>
+                </div>
+            </div>
+            <div class="table__row">
+                <div class="row">
+                    <div class="col-2 offset-1">
+                        <div class="table__cell table__cell--capt">
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class='col-2'>
+                                        <div class="form-group">
+                                            <div class='input-group date' id='datetimepicker1'>
+                                                <input type='text' class="form-control" />
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-1"><div class="table__cell"><div class="form-group"><input type="text" class="form-control"></div></div></div>
+                    <div class="col-1"><div class="table__cell"><div class="form-group"><input type="text" class="form-control js-table"></div></div></div>
+                    <div class="col-1"><div class="table__cell"><div class="form-group"><input type="text" class="form-control js-chair"></div></div></div>
+                    <div class="col-6"><div class="table__cell table__cell--last">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Pt. tolerated treatment well
+                            </label>
+                        </div>
+                        <div class="form-check form-check-group">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                            <label class="form-check-label" for="defaultCheck2">
+                                Pt. c/o after use of
+                            </label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios1" value="option1">
+                                <label class="form-check-label" for="exampleRadios1">
+                                    Scoliosis Table
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios2" value="option2">
+                                <label class="form-check-label" for="exampleRadios2">
+                                    Chair
+                                </label>
+                            </div>
+                            <input type="text" class="form-control form-control-min js-dis" disabled>
+                        </div>
+                        <div class="form-check form-check-group">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                            <label class="form-check-label" for="defaultCheck3">
+                                 Stopped treatment prematurely due to
+                            </label>
+                            <input type="text" class="form-control form-control-min">
+                        </div>
+                    </div></div>
+                </div>
+            </div>
+            <div class="table__row">
+                <div class="row">
+                    <div class="col-2 offset-1">
+                        <div class="table__cell table__cell--capt">
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class='col-2'>
+                                        <div class="form-group">
+                                            <div class='input-group date' id='datetimepicker2'>
+                                                <input type='text' class="form-control" />
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-1"><div class="table__cell"><div class="form-group"><input type="text" class="form-control"></div></div></div>
+                    <div class="col-1"><div class="table__cell"><div class="form-group"><input type="text" class="form-control js-table"></div></div></div>
+                    <div class="col-1"><div class="table__cell"><div class="form-group"><input type="text" class="form-control js-chair"></div></div></div>
+                    <div class="col-6"><div class="table__cell table__cell--last">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                            <label class="form-check-label" for="defaultCheck4">
+                                Pt. tolerated treatment well
+                            </label>
+                        </div>
+                        <div class="form-check form-check-group">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
+                            <label class="form-check-label" for="defaultCheck5">
+                                Pt. c/o after use of
+                            </label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios3" value="option1">
+                                <label class="form-check-label" for="exampleRadios3">
+                                    Scoliosis Table
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios4" value="option2">
+                                <label class="form-check-label" for="exampleRadios4">
+                                    Chair
+                                </label>
+                            </div>
+                            <input type="text" class="form-control form-control-min js-dis2" disabled>
+                        </div>
+                        <div class="form-check form-check-group">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck6">
+                            <label class="form-check-label" for="defaultCheck6">
+                                Stopped treatment prematurely due to
+                            </label>
+                            <input type="text" class="form-control form-control-min">
+                        </div>
+                    </div></div>
+                </div>
+            </div>
+            <div class="table__row">
+                <div class="row">
+                    <div class="col-2 offset-1">
+                        <div class="table__cell table__cell--capt">
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class='col-2'>
+                                        <div class="form-group">
+                                            <div class='input-group date' id='datetimepicker3'>
+                                                <input type='text' class="form-control" />
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-1"><div class="table__cell"><div class="form-group"><input type="text" class="form-control"></div></div></div>
+                    <div class="col-1"><div class="table__cell"><div class="form-group"><input type="text" class="form-control js-table"></div></div></div>
+                    <div class="col-1"><div class="table__cell"><div class="form-group"><input type="text" class="form-control js-chair"></div></div></div>
+                    <div class="col-6"><div class="table__cell table__cell--last">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck7">
+                            <label class="form-check-label" for="defaultCheck8">
+                                Pt. tolerated treatment well
+                            </label>
+                        </div>
+                        <div class="form-check form-check-group">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck8">
+                            <label class="form-check-label" for="defaultCheck8">
+                                Pt. c/o after use of
+                            </label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios5" value="option1">
+                                <label class="form-check-label" for="exampleRadios5">
+                                    Scoliosis Table
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios6" value="option2">
+                                <label class="form-check-label" for="exampleRadios6">
+                                    Chair
+                                </label>
+                            </div>
+                            <input type="text" class="form-control form-control-min">
+                        </div>
+                        <div class="form-check form-check-group">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck9">
+                            <label class="form-check-label" for="defaultCheck9">
+                                Stopped treatment prematurely due to
+                            </label>
+                            <input type="text" class="form-control form-control-min">
+                        </div>
+                    </div></div>
+                </div>
+            </div>
+            <div class="table__row">
+                <div class="row">
+                    <div class="col-2 offset-1">
+                        <div class="table__cell table__cell--capt">
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class='col-2'>
+                                        <div class="form-group">
+                                            <div class='input-group date' id='datetimepicker4'>
+                                                <input type='text' class="form-control" />
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-1"><div class="table__cell"><div class="form-group"><input type="text" class="form-control"></div></div></div>
+                    <div class="col-1"><div class="table__cell"><div class="form-group"><input type="text" class="form-control js-table"></div></div></div>
+                    <div class="col-1"><div class="table__cell"><div class="form-group"><input type="text" class="form-control js-chair"></div></div></div>
+                    <div class="col-6"><div class="table__cell table__cell--last">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck10">
+                            <label class="form-check-label" for="defaultCheck10">
+                                Pt. tolerated treatment well
+                            </label>
+                        </div>
+                        <div class="form-check form-check-group">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck11">
+                            <label class="form-check-label" for="defaultCheck11">
+                                Pt. c/o after use of
+                            </label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios7" value="option1">
+                                <label class="form-check-label" for="exampleRadios7">
+                                    Scoliosis Table
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios8" value="option2">
+                                <label class="form-check-label" for="exampleRadios8">
+                                    Chair
+                                </label>
+                            </div>
+                            <input type="text" class="form-control form-control-min">
+                        </div>
+                        <div class="form-check form-check-group">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck12">
+                            <label class="form-check-label" for="defaultCheck12">
+                                Stopped treatment prematurely due to
+                            </label>
+                            <input type="text" class="form-control form-control-min">
+                        </div>
+                    </div></div>
+                </div>
+            </div>
+            <div class="table__row">
+                <div class="row">
+                    <div class="col-2 offset-1">
+                        <div class="table__cell table__cell--capt">
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class='col-2'>
+                                        <div class="form-group">
+                                            <div class='input-group date' id='datetimepicker5'>
+                                                <input type='text' class="form-control" />
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-1"><div class="table__cell"><div class="form-group"><input type="text" class="form-control"></div></div></div>
+                    <div class="col-1"><div class="table__cell"><div class="form-group"><input type="text" class="form-control js-table"></div></div></div>
+                    <div class="col-1"><div class="table__cell"><div class="form-group"><input type="text" class="form-control js-chair"></div></div></div>
+                    <div class="col-6"><div class="table__cell table__cell--last">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck13">
+                            <label class="form-check-label" for="defaultCheck13">
+                                Pt. tolerated treatment well
+                            </label>
+                        </div>
+                        <div class="form-check form-check-group">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck14">
+                            <label class="form-check-label" for="defaultCheck14">
+                                Pt. c/o after use of
+                            </label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios9" value="option1">
+                                <label class="form-check-label" for="exampleRadios9">
+                                    Scoliosis Table
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios10" value="option2">
+                                <label class="form-check-label" for="exampleRadios10">
+                                    Chair
+                                </label>
+                            </div>
+                            <input type="text" class="form-control form-control-min">
+                        </div>
+                        <div class="form-check form-check-group">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck15">
+                            <label class="form-check-label" for="defaultCheck15">
+                                Stopped treatment prematurely due to
+                            </label>
+                            <input type="text" class="form-control form-control-min">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="table__row">
+                <div class="row">
+                    <div class="col-2 offset-1">
+                        <div class="table__btn">
+                            <button class="btn btn--add">Add</button>
+                        </div>
+                    </div>
+                    <div class="col-1">
+                        <div class="table__average">Average: </div>
+                    </div>
+                    <div class="col-1"><div class="table__cell"><div class="form-group"><input type="text" class="form-control js-tableTotal" value="0"></div></div></div>
+                    <div class="col-1"><div class="table__cell"><div class="form-group"><input type="text" class="form-control js-chairTotal" value="0"></div></div></div>
+                    <div class="col-6">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--<script src="libs/jquery/dist/jquery.min.js"></script>-->
+    <!--<script src="libs/bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>-->
+    <script src="js/common.min.js"></script>
+</body>
+</html>
